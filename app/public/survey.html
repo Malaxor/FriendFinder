@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>FriendFinder</title>
-  <!-- Latest compiled and minified CSS -->
+  <!-- bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -12,12 +12,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- external JS -->
+  <script src="app.js"></script>
 </head>
 
 <body>
-  <div class="container">
-
-    <form method="POST" action="/api/friends">
+  <div class="container">  
       <!-- Main Title -->
       <h2>Survey Questions</h2>
       <hr>
@@ -30,8 +32,8 @@
       <hr>
       <!-- questionnaire begins -->
       <h3><strong>Question 1</strong></h3>
-      <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-      <select data-value="" class="chosen-select" id="q1">
+      <h4>You'd rather read a book than watch TV.</h4>
+      <select class="answers" id="q1">
         <option value="0">Select an Option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -41,8 +43,8 @@
       </select>
 
       <h3><strong>Question 2</strong></h3>
-      <h4>I enjoy spending my free time doing physical activities, like hiking.  So keep up!</h4>
-      <select data-value="" class="chosen-select" id="q2">
+      <h4>You enjoy physical exercise.</h4>
+      <select class="answers" id="q2">
         <option value="0">Select an Option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -52,8 +54,8 @@
       </select>
 
       <h3><strong>Question 3</strong></h3>
-      <h4>The best way to unwind and bond is talking about life while sitting at a coffee shop.</h4>
-      <select data-value="" class="chosen-select" id="q3">
+      <h4>Animals?.</h4>
+      <select class="answers" id="q3">
         <option value="0">Select an Option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -63,8 +65,8 @@
       </select>
 
       <h3><strong>Question 4</strong></h3>
-      <h4>Cats Rule! Cat hair is just an accessory.</h4>
-      <select data-value="" class="chosen-select" id="q4">
+      <h4>Sex, drugs and rock 'n roll?.</h4>
+      <select class="answers" id="q4">
         <option value="0">Select an Option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -74,8 +76,8 @@
       </select>
 
       <h3><strong>Question 5</strong></h3>
-      <h4>Dogs Rule! Loyalty without a lot of demands makes a great friend.</h4>
-      <select data-value="" class="chosen-select" id="q5">
+      <h4>Are you a nympho?</h4>
+      <select class="answers" id="q5">
         <option value="0">Select an Option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -85,8 +87,8 @@
       </select>
 
       <h3><strong>Question 6</strong></h3>
-      <h4>Children are small demons, and anyone who talks incessantly about them needs to be waterboarded.</h4>
-      <select data-value="" class="chosen-select" id="q6">
+      <h4>Generally speaking, you rely more on your experience than your imagination..</h4>
+      <select class="answers" id="q6">
         <option value="0">Select an Option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -96,8 +98,8 @@
       </select>
 
       <h3><strong>Question 7</strong></h3>
-      <h4>I love talking about pop culture and the latest entertainment news.</h4>
-      <select data-value="" class="chosen-select" id="q7">
+      <h4>You rarely do something just out of sheer curiosity</h4>
+      <select class="answers" id="q7">
         <option value="0">Select an Option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -107,8 +109,8 @@
       </select>
 
       <h3><strong>Question 8</strong></h3>
-      <h4>I want to be with someone who stimulates me intellectually. Kim who?</h4>
-      <select data-value="" class="chosen-select" id="q8">
+      <h4>Nuke North Korea?</h4>
+      <select class="answers" id="q8">
         <option value="0">Select an Option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -118,8 +120,8 @@
       </select>
 
       <h3><strong>Question 9</strong></h3>
-      <h4>I would rather be happy than poor.</h4>
-      <select data-value="" class="chosen-select" id="q9">
+      <h4>It is often difficult for you to relate to other people’s feelings.</h4>
+      <select class="answers" id="q9">
         <option value="0">Select an Option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -129,8 +131,8 @@
       </select>
 
       <h3><strong>Question 10</strong></h3>
-      <h4>Work and money define whether I am successful or not.</h4>
-      <select data-value="" class="chosen-select" id="q10">
+      <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
+      <select class="answers" id="q10">
         <option value="0">Select an Option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -140,12 +142,11 @@
       </select>
       <br>
       <br>
-    </form>
     <!-- Submit Button -->
     <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i> Submit
     </button>
     <hr>
-    <!-- Creates the bootstrap modal where the image will appear -->
+    <!-- bootstrap modal where the image will appear -->
     <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -155,7 +156,7 @@
           </div>
           <div class="modal-body">
             <img src="" id="imagepreview" style="width: 100%; height: auto;">
-            <p id="result_name"></p>
+            <p id="result-name"></p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
